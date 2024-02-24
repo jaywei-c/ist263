@@ -1,0 +1,24 @@
+table, th, td {
+    border: 1px solid black;
+}
+
+h1 {
+    color: blue;
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+p, h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p a {
+    color: red;
+}
+
+.evenrow {
+    background-color: lightgray;
+}
