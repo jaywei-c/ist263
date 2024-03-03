@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More CSS</title>
+    <style>
+    h2 {background-color: #d898d8;}
+    /* from now on use hexadecimal no color names */
+    a {color: #0000ff;}
+    a:hover {color: red;}
+    /* above is a pseudo selector, hover is when mouse rolls over */
+    body {background-color: #6ff16f;
+        background-image: url("otto.png");
+        /*background can be entire page or just one smaller element */
+    }
+    .bgclass {
+        background-image: url("otto2.png")
+    }
+    .second {background-color: #efefef;
+            border: 1px solid black;
+            padding: 30px; /* inside the box space */
+            margin: 30px;  /* outside the box space */
+    }
+    </style>
+</head>
+<body>
+    <h1>More CSS</h1>
+    <h2>Hexadecimal Colors</h2>
+    <h2>Pseudo Selectors</h2>
+    <a href="http://www.google.com">Google</a><br>
+    <a href="http://www.amazon.com">Amazon</a>
+    <h2>Backgrounds</h2>
+        <p class="bgclass">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis ducimus aspernatur, eligendi placeat optio qui repellat accusamus, et consequuntur impedit voluptatem. Officia porro voluptatibus beatae ducimus tenetur debitis. Nesciunt, adipisci!Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis reprehenderit placeat perferendis similique quas, nulla dolor saepe, quod nostrum ratione aliquid, accusamus animi deserunt quae quisquam vel eos vitae maxime.</p>
+    <h2>Box Model</h2>
+        <p class="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores perspiciatis ipsum veniam optio, odio ex ullam suscipit, in quia voluptatibus sequi impedit aspernatur accusantium sint a quis nulla est et.</p>
+
+</body>
+</html>
