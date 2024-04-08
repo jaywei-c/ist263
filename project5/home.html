@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  header.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('background.png');
+    background-size: cover;
+    color: white;
+    height: 300px;
+    padding: 0 20px;
+  }
+  nav .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  nav .nav-links li {
+    padding: 0 15px;
+  }
+  nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  main.content {
+    padding: 20px;
+  }
+  .attraction {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .attraction img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+  }
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    header.banner, nav .nav-links {
+      flex-direction: column;
+    }
+    nav .nav-links li {
+      padding: 10px 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="banner">
+  <h1>Aruba Vacation Guide</h1>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="planyourtrip.html">Plan Your Trip</a></li>
+      <li><a href="activities.html">Activities & Dining</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="content">
+  <p>Welcome to Aruba, the gem of the Caribbean! A paradise island known for its stunning white-sand beaches, crystal-clear waters, and vibrant culture. Whether you're seeking relaxation or adventure, Aruba offers a diverse range of activities and attractions to make your vacation unforgettable.</p>
+  
+  <p><strong>Why Visit Aruba?</strong></p>
+  <p>Aruba is not just any Caribbean destination; it's a unique blend of sunny skies, friendly locals, and rich cultural heritage. Here, you can unwind on the pristine beaches of Eagle Beach, explore the rugged beauty of Arikok National Park, or immerse yourself in the colorful Dutch colonial architecture in Oranjestad.</p>
+  
+  <p><strong>Top Attractions:</strong></p>
+  
+  <div class="attraction">
+    <img src="eaglebeach.png" alt="Eagle Beach">
+    <p>Eagle Beach: Named one of the best beaches in the world, perfect for sunbathing, swimming, and snorkeling.</p>
+  </div>
+  
+  <div class="attraction">
+    <img src="arikok.png" alt="Arikok National Park">
+    <p>Arikok National Park: Explore Aruba's natural wonders, including caves, sand dunes, and unique wildlife.</p>
+  </div>
+  
+  <div class="attraction">
+    <img src="californialighthouse.png" alt="California Lighthouse">
+    <p>California Lighthouse: Offers panoramic views of the island and is a great spot for photos.</p>
+  </div>
+</main>
+
+<footer>
+  © 2024 Jaywei Chang - Aruba Vacation Guide. All rights reserved.
+</footer>
+
+</body>
+</html>

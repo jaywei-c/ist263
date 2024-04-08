@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan Your Trip</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  header.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('background.png');
+    background-size: cover;
+    color: white;
+    height: 300px;
+    padding: 0 20px;
+  }
+  nav .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  nav .nav-links li {
+    padding: 0 15px;
+  }
+  nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  main.content {
+    padding: 20px;
+  }
+  .section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: #f0f0f0; 
+    padding: 15px; 
+    border-radius: 5px; 
+  }
+  .section h2 {
+    font-weight: bold;
+  }
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    header.banner, nav .nav-links {
+      flex-direction: column;
+    }
+    nav .nav-links li {
+      padding: 10px 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="banner">
+  <h1>Aruba Vacation Guide</h1>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="planyourtrip.html">Plan Your Trip</a></li>
+      <li><a href="activities.html">Activities & Dining</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="content">
+  <p>Planning your trip to Aruba is exciting, and we're here to help you make the most of your visit. From finding the perfect place to stay to navigating the island, we've got all the essentials covered.</p>
+  
+  <div class="section">
+    <h2>Accommodations:</h2>
+    <p>Discover a wide range of accommodations in Aruba, from luxury resorts to charming beachfront villas. Whether you're looking for an all-inclusive experience or a cozy apartment, there's something for every traveler.</p>
+  </div>
+  
+  <div class="section">
+    <h2>Transportation:</h2>
+    <p>Getting around Aruba is easy and convenient. Rent a car to explore the island at your own pace, use public transportation for an authentic experience, or book a tour to see the best sights without the hassle.</p>
+  </div>
+  
+  <div class="section">
+    <h2>Travel Tips:</h2>
+    <p>Best time to visit: Enjoy year-round sunshine, with the best weather from January to March.<br>
+    Currency: Aruban Florin (AWG), but US dollars are widely accepted.<br>
+    Safety: Aruba is one of the safest islands in the Caribbean, but always take common precautions.</p>
+  </div>
+</main>
+
+<footer>
+  © 2024 Jaywei Chang - Aruba Vacation Guide. All rights reserved.
+</footer>
+
+</body>
+</html>
