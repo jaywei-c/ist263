@@ -192,3 +192,18 @@ iframe {
     }
 }
 
+.footer-links {
+    background-color: #007BFF; 
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-links a {
+    color: #FFFFFF;  
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.footer-links a:not(:last-child) {
+    border-right: 1px solid #FFFFFF;  
+}
