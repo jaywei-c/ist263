@@ -33,22 +33,39 @@
   }
   main.content {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .attraction {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    width: 80%;
+    max-width: 600px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
   }
   .attraction img {
     width: 150px;
     height: 150px;
     margin-right: 20px;
   }
+  .attraction p {
+    flex: 1;
+  }
+  .map-embed {
+    width: 300px;
+    height: 200px;
+  }
   footer {
     text-align: center;
     padding: 10px;
     background-color: #f0f0f0;
     font-size: 14px;
+    margin-top: auto;
+    width: 100%;
   }
   @media (max-width: 768px) {
     header.banner, nav .nav-links {
@@ -66,6 +83,11 @@
 
 <header class="banner">
   <h1>Aruba Vacation Guide</h1>
+ 
+  <div class="weather-info">
+    <p class="temperature"></p>
+    <p class="condition"></p>
+  </div>
   <nav>
     <ul class="nav-links">
       <li><a href="home.html">Home</a></li>
@@ -86,16 +108,22 @@
   <div class="attraction">
     <img src="eaglebeach.png" alt="Eagle Beach">
     <p>Eagle Beach: Named one of the best beaches in the world, perfect for sunbathing, swimming, and snorkeling.</p>
+
+    <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.631635642196!2d-70.0696957842077!3d12.551730392000726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e85478f57d93b9f%3A0xa4393f77e4a8bc37!2sEagle%20Beach!5e0!3m2!1sen!2sus!4v1620239614059!5m2!1sen!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
   
   <div class="attraction">
     <img src="arikok.png" alt="Arikok National Park">
     <p>Arikok National Park: Explore Aruba's natural wonders, including caves, sand dunes, and unique wildlife.</p>
+    
+    <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.6619046003965!2d-69.94639868420781!3d12.49888259200249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e853b923f5b86f3%3A0x4dcad66bc7b13580!2sArikok%20National%20Park!5e0!3m2!1sen!2sus!4v1620239628538!5m2!1sen!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
   
   <div class="attraction">
     <img src="californialighthouse.png" alt="California Lighthouse">
     <p>California Lighthouse: Offers panoramic views of the island and is a great spot for photos.</p>
+    
+    <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3911.031742142906!2d-70.05131958420797!3d12.613776992001426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8537da126144af%3A0xcdcd99a61932b148!2sCalifornia%20Lighthouse!5e0!3m2!1sen!2sus!4v1620239652435!5m2!1sen!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
 </main>
 
@@ -103,5 +131,27 @@
   © 2024 Jaywei Chang - Aruba Vacation Guide. All rights reserved.
 </footer>
 
+
+<script>
+  
+  function fetchWeather() {
+    fetch('https://api.weatherapi.com/v1/current.json?key=7cda4e6248e744469fb194223240505&q=Oranjestad&aqi=no')
+      .then(response => response.json())
+      .then(data => {
+        const temperature = data.current.temp_f;
+        const condition = data.current.condition.text;
+
+        
+        document.querySelector('.temperature').textContent = `Temperature: ${temperature}°F`;
+        document.querySelector('.condition').textContent = `Condition: ${condition}`;
+      })
+      .catch(error => console.error('Error fetching weather data:', error));
+  }
+
+  
+  window.onload = fetchWeather;
+</script>
+
 </body>
 </html>
+
